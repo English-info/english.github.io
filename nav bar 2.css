@@ -1,0 +1,277 @@
+
+/* Resetare stiluri implicite */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stiluri pentru corpul paginii */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease;
+}
+
+/* Stiluri pentru header */
+header {
+    background-color: #3498db;
+    padding: 20px 0;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: scaleUp 1s ease-out;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Stiluri pentru titlu */
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: bounceIn 1s ease-out;
+}
+
+/* Stiluri pentru meniul de navigație */
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+/* Linkuri de navigație cu efecte */
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 8px 20px;
+    display: block;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease-in-out;
+}
+
+/* Efect de iluminare la hover pe linkuri */
+header nav ul li a:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Adăugarea liniei de subliniere animată */
+header nav ul li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #f39c12;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+header nav ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Stiluri pentru secțiuni */
+section {
+    padding: 60px 0;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+    background-color: #ecf0f1;
+}
+
+/* Secțiune cu efect de zoom */
+section.zoom {
+    animation: zoomIn 1s ease-out forwards;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Titluri din secțiuni */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #2c3e50;
+}
+
+/* Paragrafele de text */
+p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Stiluri pentru anunțuri */
+.anunt {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.anunt:hover {
+    transform: rotate(2deg) translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.anunt h3 a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.anunt h3 a:hover {
+    color: #f39c12;
+}
+
+/* Formularul de contact */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(50px);
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out 0.5s forwards;
+}
+
+/* Efecte de focus pe input-uri și textarea */
+form label {
+    font-size: 1.1rem;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease-in-out;
+}
+
+/* Efect de focus pe input-uri */
+form input:focus,
+form textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1rem;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Animații */
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-2000px);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(30px);
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

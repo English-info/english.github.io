@@ -1,0 +1,144 @@
+/* Resetare stiluri implicite */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundalul paginii */
+body {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Animație de fundal */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Containerul pentru timer */
+#countdown {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-out;
+    background: rgba(0, 0, 0, 0.7);
+    transform: scale(0);
+    animation: scaleIn 1s ease-out forwards;
+}
+
+/* Efecte de mișcare ale timerului */
+@keyframes scaleIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Stiluri pentru timerul principal */
+#timer {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #f39c12;
+    animation: calendarEffect 1s linear infinite;
+    white-space: nowrap;
+}
+
+/* Animație pentru timer (efect de pagină de calendar care se mișcă) */
+@keyframes calendarEffect {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Împărțirea numerelor timerului */
+#timer span {
+    display: inline-block;
+    margin: 0 10px;
+    animation: slideUp 1s ease-in-out infinite;
+}
+
+/* Animație pentru numeralele timerului, imitând efectul de pagină care se răsfoiește */
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+/* Textul mare de pe timer */
+#countdown h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Stiluri pentru site (ascuns până la expirarea timerului) */
+#siteContent {
+    display: none;
+}
+
+/* Fundalul timerului */
+#timer {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #f39c12;
+    animation: pulse 1s infinite;
+    white-space: nowrap;
+}
+
+/* Animație de pulsație pe timer */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

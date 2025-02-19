@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Anunțuri</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav bar.css">  
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Site Anunțuri</h1>
+            <nav>
+                <ul>
+                    <li><a href="Index-en.html"> Engleză</a></li>
+                    <li><a href="#home">Acasă</a></li>
+                    <li><a href="anunt_detalii.html"> Anunț</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+        <section id="home">
+            <div class="container">
+                <h2>Bine ai venit pe site-ul nostru de anunțuri!</h2>
+                <p>Aici poți găsi sau posta diverse anunțuri. Căutați ceva anume sau adăugați un anunț personalizat!</p>
+            </div>
+        </section>
+
+        <section id="anunturi">
+            <div class="container">
+                <h2>Anunțuri recente</h2>
+                <div class="anunt">
+                    <h3><a href="anunt_detalii.html?id=1">Anunț 1</a></h3>
+                    <p>Data de 19.02.2025</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contactează-ne</h2>
+                <p>Ai întrebări sau vrei să publici un anunț? Scrie-ne un mesaj!</p>
+                <form action="#">
+                    <label for="name">Nume:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Mesaj:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Trimite mesajul</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Site Anunțuri. Toate drepturile rezervate.</p>
+            </div>
+        </footer>
+    </div>
+
+    
+</body>
+</html>
+
